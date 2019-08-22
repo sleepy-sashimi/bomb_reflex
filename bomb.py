@@ -22,16 +22,16 @@ class Bomb(Sprite):
         self.settings = br_game.settings
         
         """Load bomb and get its rect"""
-        picture = pygame.image.load("images/2.png")
-        self.image = pygame.transform.scale(picture,(80,80))
+        picture = pygame.image.load("images/bomb.png")
+        self.image = pygame.transform.scale(picture,(60,60))
         self.rect = self.image.get_rect()
         
         
         
     def update(self):
         """Update new bomb position"""
-        self.rect.x = (random.randint(0,1120))
-        self.rect.y = (random.randint(0,720))
+        self.rect.x = (random.randint(0,1140))
+        self.rect.y = (random.randint(0,740))
         self.randpos = (self.rect.x,self.rect.y)
 
         

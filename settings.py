@@ -16,3 +16,7 @@ class Settings:
         
         self.bombs = 10
         self.timer = 500
+        self.bomb_points = 10000
+        self.level = 1
+        
+        self.score = 0
