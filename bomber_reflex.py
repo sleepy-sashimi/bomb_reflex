@@ -49,9 +49,6 @@ class BomberReflex:
                 elapsed_time -= self.settings.timer
             self._check_events()
             self.bombs.draw(self.screen)
-            
-            print(self.settings.timer)
-            print(self.settings.level)
              
             #Make the most recently drawn screen visible
             pygame.display.flip()
