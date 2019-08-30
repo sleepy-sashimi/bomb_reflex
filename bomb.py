@@ -7,9 +7,17 @@ Created on Tue Aug 20 09:04:33 2019
 
 
 import pygame
+import os
 import random
 from pygame.sprite import Sprite
 
+import sys
+
+if getattr(sys, 'frozen', False):
+    Path = sys._MEIPASS              #This is for when the program is frozen
+else:
+    Path = os.path.dirname(__file__) #This is when the program normally runs
+    
 class Bomb(Sprite):
     """A class to manage the bomb."""
     
@@ -22,7 +30,7 @@ class Bomb(Sprite):
         self.settings = br_game.settings
         
         """Load bomb and get its rect"""
-        picture = pygame.image.load("images/bomb.png")
+        picture = pygame.image.load(os.path.join(Path,"bomb.png"))
         self.image = pygame.transform.scale(picture,(60,60))
         self.rect = self.image.get_rect()
         

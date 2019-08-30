@@ -18,7 +18,7 @@ class Scoreboard:
         self.bomb_clicked = 0
         
         self.text_color = (252,3,53)
-        self.font = pygame.font.SysFont(None,48)
+        self.font = pygame.font.SysFont('arial',48)
         
         self.prep_score()
         

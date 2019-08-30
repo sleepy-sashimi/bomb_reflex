@@ -11,10 +11,6 @@ from settings import Settings
 from bomb import Bomb
 from scoreboard import Scoreboard
 
-clock = pygame.time.Clock()
-time_counter = 0
-
-
 class BomberReflex:
     """Overall class to manage game assets and behavior."""
     
@@ -38,7 +34,7 @@ class BomberReflex:
         elapsed_time = 0
 
         while True:
-            time_delta = clock.tick(60)
+            time_delta = self.clock.tick(60)
             elapsed_time += time_delta
             
             #Redraw the screen during each pass through the loop
@@ -49,6 +45,7 @@ class BomberReflex:
                 elapsed_time -= self.settings.timer
             self._check_events()
             self.bombs.draw(self.screen)
+
              
             #Make the most recently drawn screen visible
             pygame.display.flip()
